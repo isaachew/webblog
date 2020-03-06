@@ -1,4 +1,1 @@
-#top{
-height:10vh;
-background-color:#808080
-}
+body{margin:0}#top{height:10vh;background-color:#808080}#tabs{height:10vh;display:flex;justify-content:space-between}.tabs{height:10vh;margin-right:1vw;width:100%}
