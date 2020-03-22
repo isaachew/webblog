@@ -20,10 +20,11 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		tab.id="tb"+i
 		
 		cnt=js.tabs[i].content
-		rp=cnt.replace(/-([^-]+)-([^-]+)-/g,(x,y,z)=>{
+		rp=cnt.replace(/-([^-]+)-([^-]*)-/g,(x,y,z)=>{
 			switch(y){
-				case "age":
-					return (new Date()-new Date(z.slice(4),z.slice(2,4)-1,z.slice(0,2)))/31556952000|0
+				case "d":return "-"
+				case "age":return (new Date()-new Date(z.slice(4),z.slice(2,4)-1,z.slice(0,2)))/31556952000|0
+				case "mono":return "<pre>"+z+"</pre>"
 				
 			}
 			
@@ -31,7 +32,7 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		})
 		
 		
-		tab.textContent=rp
+		tab.innerHTML=rp
 		tab.style.backgroundColor=js.tabs[i].bg
 		tbc.appendChild(tab)
 	}

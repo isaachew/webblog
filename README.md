@@ -1,4 +1,3 @@
 webblog
 -
-A remake of my webpage.
-
+My webpage.

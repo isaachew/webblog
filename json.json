@@ -1,1 +1,15 @@
-{"tabs":[{"title":"Test","content":"test","bg":"#abcdef"},{"title":"Isaac","content":"I am Isaac and I am -age-22102008- years old.","bg":"#ff8000"}],"users":[]}
+{
+	"tabs":[
+		{
+			"title":"Test",
+			"content":"test",
+			"bg":"#abcdef"
+		},
+		{
+			"title":"Isaac",
+			"content":"I am Isaac and I am -age-22102008- years old. Some things I like include maths, coding, and partly science. ",
+			"bg":"#ff8000"
+		}
+	],
+	"users":[]
+}
