@@ -19,8 +19,8 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		tab.className="tab"
 		tab.id="tb"+i
 		
-		cnt=js.tabs[i].content
-		rp=cnt.replace(/-([^-]+)-([^-]*)-/g,macro)
+		cnt=js.tabs[i].content.replace(/</g,"&lt;")
+		rp=cnt.replace(/`([^`]+)`([^`]*)`/g,macro)
 		
 		
 		tab.innerHTML=rp

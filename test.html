@@ -2,6 +2,9 @@
 	<script src="macros.js"></script>
 	<title>Testing...</title>
 <body>
-	<textarea oninput="document.getElementById('rdiv').innerHTML=this.value.replace(/-([^-]+)-([^-]*)-/g,macro)"></textarea>
+	<textarea oninput="	
+	document.getElementById('rdiv').innerHTML=this.value
+	.replace(/</g,'&amp;lt;')
+	.replace(/-([^-]+)-([^-]*)-/g,macro)"></textarea>
 	<div id="rdiv"></div>
 </body>
