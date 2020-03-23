@@ -5,6 +5,6 @@
 	<textarea oninput="	
 	document.getElementById('rdiv').innerHTML=this.value
 	.replace(/</g,'&amp;lt;')
-	.replace(/-([^-]+)-([^-]*)-/g,macro)"></textarea>
+	.replace(/`([^`]+)`([^`]*)`/g,macro)"></textarea>
 	<div id="rdiv"></div>
 </body>

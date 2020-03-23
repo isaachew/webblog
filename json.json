@@ -2,12 +2,12 @@
 	"tabs":[
 		{
 			"title":"Test",
-			"content":"test",
+			"content":["test"],
 			"bg":"#abcdef"
 		},
 		{
 			"title":"Isaac",
-			"content":"I am Isaac and I am -age-22102008- years old. Some things I like include maths, coding, and partly science. ",
+			"content":["I am Isaac and I am `age`22102008` years old. Some things I like include maths, coding, and partly science. ","hello"],
 			"bg":"#ff8000"
 		}
 	],

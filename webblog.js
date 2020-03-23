@@ -19,11 +19,22 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		tab.className="tab"
 		tab.id="tb"+i
 		
+		
+		for(j of js.tabs[i].content){
+			cnt=j.replace(/</g,"&lt;")
+			rp=cnt.replace(/`([^`]+)`([^`]*)`/g,macro)
+			dv=document.createElement("div")
+			dv.className="sect"
+			dv.innerHTML=rp
+			tab.appendChild(dv)
+		}
+		/*/
 		cnt=js.tabs[i].content.replace(/</g,"&lt;")
 		rp=cnt.replace(/`([^`]+)`([^`]*)`/g,macro)
 		
 		
 		tab.innerHTML=rp
+		/**/
 		tab.style.backgroundColor=js.tabs[i].bg
 		tbc.appendChild(tab)
 	}
