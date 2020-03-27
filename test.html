@@ -4,7 +4,7 @@
 <body>
 	<textarea oninput="	
 	document.getElementById('rdiv').innerHTML=this.value
-	.replace(/</g,'&amp;lt;')
+	.replace(/&amp;/g,'&amp;amp;').replace(/</g,'&amp;lt;')
 	.replace(/`([^`]+)`([^`]*)`/g,macro)"></textarea>
 	<div id="rdiv"></div>
 </body>

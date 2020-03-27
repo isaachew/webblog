@@ -21,7 +21,7 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		
 		
 		for(j of js.tabs[i].content){
-			cnt=j.replace(/</g,"&lt;")
+			cnt=j.replace(/&/g,"&amp;").replace(/</g,"&lt;")
 			rp=cnt.replace(/`([^`]+)`([^`]*)`/g,macro)
 			dv=document.createElement("div")
 			dv.className="sect"
