@@ -17,6 +17,7 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		tbs.appendChild(swi)
 		var tab=document.createElement("div")
 		tab.className="tab"
+		tab.style.display=i?"none":"block"
 		tab.id="tb"+i
 		
 		
