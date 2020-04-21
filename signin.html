@@ -1,19 +1,21 @@
 <html>
 	<head>
 		<title>Sign in</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
-			form{width:35vw;margin:auto}
-			input{border-radius:1vh;border:1px solid #c0c0c0}
+			form{width:35vw;margin:auto;background-color:#f0f0f0;padding:1vw;}
+			input{border-radius:1vh;border:1px solid #c0c0c0;margin:1vh}
+			#subm{padding:1vh}
+			body{font-family:Arial;margin:0}
 		</style>
 	</head>
 	<body>
-		<div style="width:100vw">
+		<div style="width:100vw;height:100vh">
 			<form action="s.php" method="post">
+				<h2>Sign in</h2>
 				Name <input name="user"><br>
-				Password <input name="pass"><br>
+				Password <input name="pass" type="password"><br>
 				Create account<input type="checkbox" name="new"><br>
-				<input type="submit" value="Sign In">
+				<input id="subm" type="submit" value="Sign In">
 			</form>
 		<div>
 	</body>
