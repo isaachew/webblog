@@ -10,6 +10,7 @@ if($_POST["new"]){
 	header("Location: /");
 }else{
 	if(hash("sha256",$_POST["user"]."(&ÞÊI/m¤À".$_POST["pass"])==$jsd->users->$_POST["user"]){
+	
 		header("Location: /");
 		
 	}else{
