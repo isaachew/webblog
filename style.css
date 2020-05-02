@@ -34,7 +34,7 @@ body{
 	border-radius:1vh;
 	padding:1vh
 }
-#sib{
+.btn{
 	color:#a0a0a0;
 	text-decoration:none;
 	background-color:#606060;

@@ -2,13 +2,15 @@ console.log("Web Blog")
 let tbs=document.getElementById("tabs")
 let tbc=document.getElementById("tabc")
 var lt=0
-fetch("json.json").then((r)=>r.json()).then((js)=>{	
-	for(i=0;i<js.tabs.length;i++){
+fetch("json.json").then((r)=>r.json()).then((js)=>{
+	i=0
+	for(tbn in js.tabs){
+		ti=js.tabs[tbn]
 		var swi=document.createElement("div")
 		swi.className="tabs"
 		swi.id="ts"+i
-		swi.textContent=js.tabs[i].title
-		swi.style.backgroundColor=js.tabs[i].bg
+		swi.textContent=ti.title
+		swi.style.backgroundColor=ti.bg
 		swi.onclick=function(){
 			document.getElementById("tb"+lt).style.display="none"
 			document.getElementById("tb"+this.id.slice(2)).style.display="block"
@@ -21,7 +23,7 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		tab.id="tb"+i
 		
 		
-		for(j of js.tabs[i].content){
+		for(j of ti.content){
 			cnt=j.replace(/&/g,"&amp;").replace(/</g,"&lt;")
 			rp=cnt.replace(/`([^`]+)`([^`]*)`/g,macro)
 			dv=document.createElement("div")
@@ -36,8 +38,9 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		
 		tab.innerHTML=rp
 		/**/
-		tab.style.backgroundColor=js.tabs[i].bg
+		tab.style.backgroundColor=ti.bg
 		tbc.appendChild(tab)
+		i++
 	}
 	
 	
