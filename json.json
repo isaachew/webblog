@@ -1,17 +1,20 @@
 {
 	"tabs":{
-		"":{
+		"_empty_":{
 			"title":"Test",
 			"content":["test"],
 			"bg":"#abcdef"
 		},
-		"Isaac":{
-			"title":"Isaac",
-			"content":["I am Isaac and I am `age`22102008` years old. Some things I like include maths, coding, and music. This is my webpage that I programmed. ",
-				"hello",
-				"In February 2020, I created a Mandelbrot set viewer. You can try it out here. (Click the black square. ) `code`<iframe srcdoc=\"<body style='overflow:hidden;margin:0'><div onclick='\nthis.parentNode.removeChild(this)\ncanv=document.createElement(&amp;quot;canvas&amp;quot;)\ncanv.width=600\ncanv.height=600\ndocument.body.appendChild(canv)\nrnc=canv.getContext(&amp;quot;webgl&amp;quot;)\nrnc.clearColor(0,0,1,1)\nrnc.clear(rnc.COLOR_BUFFER_BIT)\n\nvsh=rnc.createShader(rnc.VERTEX_SHADER)\nrnc.shaderSource(vsh,\\t\nprecision mediump float;\nattribute vec4 aVertexPosition;\nuniform mat4 uModelViewMatrix;\nuniform mat4 uProjectionMatrix;\nvarying vec4 pos;\nvoid main(){\npos=aVertexPosition;\ngl_Position=aVertexPosition;\n}\n\\t)\nrnc.compileShader(vsh)\n\nfsh=rnc.createShader(rnc.FRAGMENT_SHADER)\nrnc.shaderSource(fsh,\\t\nprecision highp float;\nvarying vec4 pos;\nuniform float anf;\nuniform vec2 vct;\nvec4 col(float iter){\nreturn vec4(1,iter/65536.0,mod(iter,256.0)/256.0,1);\n}\nvoid main(){\nvec2 tpos=pos.xy*2.0/anf+vct;\nvec2 iteb=pos.xy*2.0/anf+vct;\ngl_FragColor=vec4(0,0,0,1.0);\nfor(float ite=0.0;ite<2000.0;ite++){\niteb=vec2(iteb.x*iteb.x-iteb.y*iteb.y,2.0*iteb.x*iteb.y)+tpos;\nif(iteb.x*iteb.x+iteb.y*iteb.y>4.0){\ngl_FragColor=col(ite);\nbreak;\n}\n}\n}\n\\t)\nrnc.compileShader(fsh)\n\nprog=rnc.createProgram()\nrnc.attachShader(prog,vsh)\nrnc.attachShader(prog,fsh)\nrnc.linkProgram(prog)\narb=new Float32Array([-1,-1,-1,1,1,1,1,-1])\nrnc.bindBuffer(rnc.ARRAY_BUFFER,rnc.createBuffer())\nrnc.bufferData(rnc.ARRAY_BUFFER,arb,rnc.STATIC_DRAW)\nrnc.vertexAttribPointer(rnc.getAttribLocation(prog,&amp;quot;aVertexPosition&amp;quot;),2,rnc.FLOAT,false,0,0)\nrnc.enableVertexAttribArray(rnc.getAttribLocation(prog,&amp;quot;aVertexPosition&amp;quot;))\nrnc.useProgram(prog)\n\n//vec2(-0.73581021291426529362666997258202173,0.19671833795849660853072293775767321)\ngab=rnc.getUniformLocation(prog,&amp;quot;anf&amp;quot;)\nvtg=rnc.getUniformLocation(prog,&amp;quot;vct&amp;quot;)\nrnc.uniform1f(gab,1)\nrnc.drawArrays(rnc.TRIANGLE_FAN,0,4)\n\nk=1\ncx=0\ncy=0\nzf=1.1\ncanv.onmousewheel=(e)=>{\ne.preventDefault()\nev=e\nif(e.deltaY<0){\n\tnx=(e.x-300)/150/k*(1-1/zf)\n\tny=(300-e.y)/150/k*(1-1/zf)\n\tcx+=nx\n\tcy+=ny\n\tk*=zf\n}else{\n\tk/=zf\n}\nrnc.uniform1f(gab,k)\nrnc.uniform2f(vtg,cx,cy)\nrnc.drawArrays(rnc.TRIANGLE_FAN,0,4)\n}' style='background-color:#000000;width:100vw;height:100vh'></div></body>\" width='600' height='600'></iframe>`"],
-			"bg":"#ff8000"
+	"Isaac":{
+		"title":"Isaac",
+		"content":["I am Isaac and I am `age`22102008` years old. Some things I like include maths, coding, and music. This is my webpage that I programmed. ",
+			"In February 2020, I created a Mandelbrot set viewer. You can try it out here. (Click the black square. ) `code`<iframe srcdoc=\"<body style='overflow:hidden;margin:0'><div onclick='\nthis.parentNode.removeChild(this)\ncanv=document.createElement(&amp;quot;canvas&amp;quot;)\ncanv.width=600\ncanv.height=600\ndocument.body.appendChild(canv)\nrnc=canv.getContext(&amp;quot;webgl&amp;quot;)\nrnc.clearColor(0,0,1,1)\nrnc.clear(rnc.COLOR_BUFFER_BIT)\n\nvsh=rnc.createShader(rnc.VERTEX_SHADER)\nrnc.shaderSource(vsh,\\t\nprecision mediump float;\nattribute vec4 aVertexPosition;\nuniform mat4 uModelViewMatrix;\nuniform mat4 uProjectionMatrix;\nvarying vec4 pos;\nvoid main(){\npos=aVertexPosition;\ngl_Position=aVertexPosition;\n}\n\\t)\nrnc.compileShader(vsh)\n\nfsh=rnc.createShader(rnc.FRAGMENT_SHADER)\nrnc.shaderSource(fsh,\\t\nprecision highp float;\nvarying vec4 pos;\nuniform float anf;\nuniform vec2 vct;\nvec4 col(float iter){\nreturn vec4(1,iter\/65536.0,mod(iter,256.0)\/256.0,1);\n}\nvoid main(){\nvec2 tpos=pos.xy*2.0\/anf+vct;\nvec2 iteb=pos.xy*2.0\/anf+vct;\ngl_FragColor=vec4(0,0,0,1.0);\nfor(float ite=0.0;ite<2000.0;ite++){\niteb=vec2(iteb.x*iteb.x-iteb.y*iteb.y,2.0*iteb.x*iteb.y)+tpos;\nif(iteb.x*iteb.x+iteb.y*iteb.y>4.0){\ngl_FragColor=col(ite);\nbreak;\n}\n}\n}\n\\t)\nrnc.compileShader(fsh)\n\nprog=rnc.createProgram()\nrnc.attachShader(prog,vsh)\nrnc.attachShader(prog,fsh)\nrnc.linkProgram(prog)\narb=new Float32Array([-1,-1,-1,1,1,1,1,-1])\nrnc.bindBuffer(rnc.ARRAY_BUFFER,rnc.createBuffer())\nrnc.bufferData(rnc.ARRAY_BUFFER,arb,rnc.STATIC_DRAW)\nrnc.vertexAttribPointer(rnc.getAttribLocation(prog,&amp;quot;aVertexPosition&amp;quot;),2,rnc.FLOAT,false,0,0)\nrnc.enableVertexAttribArray(rnc.getAttribLocation(prog,&amp;quot;aVertexPosition&amp;quot;))\nrnc.useProgram(prog)\n\n\/\/vec2(-0.73581021291426529362666997258202173,0.19671833795849660853072293775767321)\ngab=rnc.getUniformLocation(prog,&amp;quot;anf&amp;quot;)\nvtg=rnc.getUniformLocation(prog,&amp;quot;vct&amp;quot;)\nrnc.uniform1f(gab,1)\nrnc.drawArrays(rnc.TRIANGLE_FAN,0,4)\n\nk=1\ncx=0\ncy=0\nzf=1.1\ncanv.onmousewheel=(e)=>{\ne.preventDefault()\nev=e\nif(e.deltaY<0){\n\tnx=(e.x-300)\/150\/k*(1-1\/zf)\n\tny=(300-e.y)\/150\/k*(1-1\/zf)\n\tcx+=nx\n\tcy+=ny\n\tk*=zf\n}else{\n\tk\/=zf\n}\nrnc.uniform1f(gab,k)\nrnc.uniform2f(vtg,cx,cy)\nrnc.drawArrays(rnc.TRIANGLE_FAN,0,4)\n}' style='background-color:#000000;width:100vw;height:100vh'><\/div><\/body>\" width='600' height='600'><\/iframe>`",
+			"transparency image"
+			],
+		"bg":"#ff8000"
 		}
 	},
-	"users":{}
+	"users":{
+		"isaachew":"631c2fcef825b3fd6567e00149b4ac62025440777c153372f0d58ca35eb05a6a"
+	}
 }

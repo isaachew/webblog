@@ -7,10 +7,12 @@ if($_POST["new"]){
 	$jsd->users->$_POST["user"]=hash("sha256",$_POST["user"]."(&ÞÊI/m¤À".$_POST["pass"]);
 	echo "<pre>".str_replace("<","&lt;",json_encode($jsd))."</pre>";
 	echo intval(file_put_contents("json.json",json_encode($jsd)))." byte(s) written<br>";
+	setcookie("signin");
+	setcookie("user",$_POST["user"]);
 	header("Location: /");
 }else{
 	if(hash("sha256",$_POST["user"]."(&ÞÊI/m¤À".$_POST["pass"])==$jsd->users->$_POST["user"]){
-	
+		header("Set-Cookie: signin=yes; user=".$_POST["user"]);
 		header("Location: /");
 		
 	}else{

@@ -47,4 +47,8 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 	
 	
 })
-
+if(~document.cookie.indexOf("signin=;")){
+	document.getElementById("sib").textContent="Sign out"
+	
+	
+}
