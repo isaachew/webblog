@@ -7,6 +7,8 @@ function macro(x,y,z){
 			var ce=document.createElement("div")
 			ce.innerHTML=z.replace(/&lt;/g,"<").replace(/&amp;/g,"&")
 			return ce.outerHTML
+		case "img":
+			return `<img src="${z.replace(/&lt;/g,"<").replace(/&amp;/g,"&")}">`
 		case "mono":return "<pre>"+z+"</pre>"
 		
 	}

@@ -26,7 +26,8 @@ body{
 }
 .tab{
 	height:100%;
-	padding:2vh
+	padding:2vh;
+	overflow-y:scroll
 }
 .sect{
 	background-color:#ffffff20;

@@ -47,8 +47,12 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 	
 	
 })
-if(~document.cookie.indexOf("signin=;")){
+if(~document.cookie.indexOf("signin=yes")){
 	document.getElementById("sib").textContent="Sign out"
-	
-	
+	document.getElementById("sib").href="#"
+	document.getElementById("sib").onclick=()=>{
+		document.cookie="signin="
+		document.cookie="user="
+		location.reload()
+	}
 }
