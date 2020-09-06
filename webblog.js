@@ -3,6 +3,7 @@ let tbs=document.getElementById("tabs")
 let tbc=document.getElementById("tabc")
 var lt=0
 fetch("json.json").then((r)=>r.json()).then((js)=>{
+	console.log(js)
 	i=0
 	for(tbn in js.tabs){
 		ti=js.tabs[tbn]
@@ -24,11 +25,14 @@ fetch("json.json").then((r)=>r.json()).then((js)=>{
 		
 		
 		for(j of ti.content){
-			cnt=j.replace(/&/g,"&amp;").replace(/</g,"&lt;")
+			cnt=j.content.replace(/&/g,"&amp;").replace(/</g,"&lt;")
 			rp=cnt.replace(/`([^`]+)`([^`]*)`/g,macro)
 			dv=document.createElement("div")
 			dv.className="sect"
-			dv.innerHTML=rp
+			ps=document.createElement("div")
+			ps.innerHTML=rp
+			dv.appendChild(ps)
+			dv.appendChild(new Text(new Date(j.time*1000)))
 			tab.appendChild(dv)
 		}
 		/*/
